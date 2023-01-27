@@ -1,4 +1,11 @@
-# Darktide Armoury Exchange Extension
+# Darktide Armoury Exchange Extension ACS
+
+## Forked from danreeves/dt-exchange
+
+ACS = All Characters & Stores
+
+-Lazy edit of the Armoury Exchange addon, loads and displays all stores from all characters at once
+-Works best with Custom Filters applied, otherwise you'll be scrolling through a pretty long list of items, which defeats the purpose
 
 ## [Chrome Extension](https://chrome.google.com/webstore/detail/armoury-exchange/hcjihmkcnjkfkaeebhnpjcnnibpoolgc) | [Firefox Addon](https://addons.mozilla.org/en-GB/firefox/addon/armoury-exchange/)
 
