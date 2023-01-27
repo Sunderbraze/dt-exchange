@@ -73,52 +73,7 @@ export function Layout() {
   return (
     <>
       <Title>Armoury Exchange</Title>
-      <ul className="char-list">
-        {account.characters.map((character) => {
-          return (
-            <li key={character.id}>
-              <Button
-                active={activeChar === character.id}
-                onClick={() => {
-                  setActiveChar(character.id)
-                }}
-              >
-                <div className="char-button">
-                  <img
-                    src={archetype[character.archetype]}
-                    className="class-icon"
-                  />
-                  <div>
-                    <div>{character.name}</div>
-                    <div
-                      style={{
-                        textTransform: "capitalize",
-                      }}
-                    >
-                      {character.archetype} {character.level}
-                    </div>
-                  </div>
-                </div>
-              </Button>
-            </li>
-          )
-        })}
-      </ul>
-      <br />
-      <SplitRuleWrapper columns={3}>
-        <Rule
-          label={"Store Type"}
-          type={"select"}
-          name={"store_type"}
-          value={storeType}
-          focus={focusedInput}
-          dataValues={STORE_OPTIONS}
-          onChange={function (event) {
-            setStoreType(event.target.value as StoreType)
-          }}
-          onFocus={(event) => setFocusedInput(event.target.id)}
-          onBlur={() => setFocusedInput("")}
-        />
+      <SplitRuleWrapper columns={2}>
         <Rule
           label={"Filter By"}
           type={"select"}
@@ -171,15 +126,43 @@ export function Layout() {
         </div>
       ) : null}
 
-      <Store
-        character={account.characters.find((char) => char.id === activeChar)}
-        storeType={storeType}
-        sortOption={sortOption}
-        filterOption={filterOption}
-        enableRuleBasedFilterOption={enableRuleBasedFiltering}
-        filterRules={rbfOption}
-        deemphasizeOption={deemphasizeOption}
-      />
+
+      {account.characters.map((character) => {
+        return (
+        <div key={character.id}>{character.name}<br />
+        	<span
+	          style={{
+	            textTransform: "capitalize",
+	            fontSize: "12px",
+	          }}
+        	>Credits</span>
+		      <Store
+        		character={character}
+		        storeType={"credits"}
+		        sortOption={sortOption}
+		        filterOption={filterOption}
+		        enableRuleBasedFilterOption={enableRuleBasedFiltering}
+		        filterRules={rbfOption}
+		        deemphasizeOption={deemphasizeOption}
+		      />
+		      <span
+	          style={{
+	            textTransform: "capitalize",
+	            fontSize: "12px",
+	          }}
+        	>Marks</span>
+		      <Store
+        		character={character}
+		        storeType={"marks"}
+		        sortOption={sortOption}
+		        filterOption={filterOption}
+		        enableRuleBasedFilterOption={enableRuleBasedFiltering}
+		        filterRules={rbfOption}
+		        deemphasizeOption={deemphasizeOption}
+		      />
+		    </div>
+        )
+      })}
     </>
   )
 }
