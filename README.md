@@ -1,13 +1,14 @@
 # Darktide Armoury Exchange Extension ACS
 
-## Forked from danreeves/dt-exchange
-
-ACS = All Characters & Stores
-
+- ACS = All Characters & Stores
+- Forked from [danreeves/dt-exchange](https://github.com/danreeves/dt-exchange)
 - Lazy edit of the Armoury Exchange addon, loads and displays all stores from all characters at once
 - Works best with Custom Filters applied, otherwise you'll be scrolling through a pretty long list of items, which defeats the purpose
+- Currently available for Firefox, will port to Chrome if there is any demand
 
-## [Chrome Extension](https://chrome.google.com/webstore/detail/armoury-exchange/hcjihmkcnjkfkaeebhnpjcnnibpoolgc) | [Firefox Addon](https://addons.mozilla.org/en-GB/firefox/addon/armoury-exchange/)
+## ACS Version: [Firefox Addon](https://addons.mozilla.org/en-GB/firefox/addon/armoury-exchange-acs/)
+
+## Original Addon: [Chrome Extension](https://chrome.google.com/webstore/detail/armoury-exchange/hcjihmkcnjkfkaeebhnpjcnnibpoolgc) | [Firefox Addon](https://addons.mozilla.org/en-GB/firefox/addon/armoury-exchange/)
 
 ## Usage
 
@@ -17,8 +18,9 @@ ACS = All Characters & Stores
 ## Installing from source
 
 1. Download the source
-   - Clone this repo and follow the Development steps
-   - [Download the auto-generated latest build](https://github.com/danreeves/dt-exchange/releases/tag/latest) from the releases page
+   - Clone this repo or the original and follow the Development steps
+   - [Download the latest original build](https://github.com/danreeves/dt-exchange/releases/tag/latest)
+   - [Or download the latest ACS build](https://github.com/Sunderbraze/dt-exchange/releases/tag/latest)
 2. Follow the instructions for your browser:
    - [Chrome/Opera/Edge](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
    - [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
@@ -38,3 +40,7 @@ Dependencies: node & npm
 - [errnoh](https://github.com/errnoh)
 - [Chris Bitler](https://github.com/Chris-Bitler)
 - [CautemocSg](https://github.com/CautemocSg)
+
+### ACS Fork
+
+- [Sunderbraze](https://github.com/Sunderbraze)
